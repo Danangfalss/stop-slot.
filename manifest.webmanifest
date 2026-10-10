@@ -1,0 +1,10 @@
+{
+  "name": "STOP SLOT — Perjalanan Baru",
+  "short_name": "STOP SLOT",
+  "description": "Pendamping mandiri untuk berhenti bermain slot.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#07131f",
+  "theme_color": "#07131f",
+  "icons": []
+}

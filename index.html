@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#07131f">
+<meta name="description" content="STOP SLOT — perjalanan berhenti bermain slot, pantau waktu, uang yang dijaga, target, jurnal, dan pencapaian.">
+<link rel="manifest" href="manifest.webmanifest">
+<title>STOP SLOT — Perjalanan Baru</title>
+<style>
+:root{--bg:#07131f;--panel:#0e2030;--panel2:#132a3c;--line:#234154;--text:#f1f7fb;--muted:#a8bdca;--green:#49e5ac;--green2:#1ab981;--orange:#ffbd69;--red:#ff7f86;--radius:20px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#102a3d 0%,var(--bg) 52%);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;min-height:100vh;padding-bottom:92px}
+button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:760px;margin:auto;padding:18px 15px 28px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:4px 0 20px}.brand{display:flex;gap:11px;align-items:center}.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,#55f0b4,#148a72);display:grid;place-items:center;color:#05221b;font-size:24px;font-weight:900;box-shadow:0 8px 30px #24d49a30}.brand h1{font-size:20px;line-height:1;margin:0 0 5px;letter-spacing:1.5px}.brand small{color:var(--muted);font-size:11px;letter-spacing:.7px}.iconbtn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:14px;padding:11px 13px}
+h2{font-size:19px;margin:0 0 12px}h3{font-size:15px;margin:0 0 8px}.muted{color:var(--muted)}.small{font-size:12px;line-height:1.5}.card{background:linear-gradient(145deg,#11283a,#0c1c2a);border:1px solid #1e3a4d;border-radius:var(--radius);padding:17px;margin-bottom:14px;box-shadow:0 12px 34px #00000015}.hero{position:relative;overflow:hidden;background:linear-gradient(145deg,#123d3b,#102b3a 60%,#0d2030);border-color:#28685d}.hero:after{content:"";position:absolute;width:190px;height:190px;border-radius:50%;right:-85px;top:-90px;background:#49e5ac12;border:1px solid #49e5ac24}.eyebrow{font-size:11px;font-weight:800;color:var(--green);letter-spacing:1.5px;text-transform:uppercase}.duration{font-size:clamp(29px,8vw,43px);font-weight:850;letter-spacing:-1.5px;margin:7px 0 3px;line-height:1.15}.duration span{font-size:15px;letter-spacing:0;color:var(--muted);font-weight:600}.subduration{font-size:13px;color:var(--muted)}.progressline{height:7px;background:#24404b;border-radius:20px;overflow:hidden;margin:13px 0 8px}.progressline div{height:100%;background:linear-gradient(90deg,var(--green2),#8fffd1);width:0;transition:width .4s}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat{background:#0a1b29a8;border:1px solid #284657;border-radius:16px;padding:13px}.stat .label{font-size:11px;color:var(--muted);margin-bottom:7px}.stat .value{font-size:21px;font-weight:800;letter-spacing:-.5px}.stat .note{font-size:11px;color:var(--muted);margin-top:5px}.green{color:var(--green)}.orange{color:var(--orange)}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.field{margin:11px 0}.field label{display:block;font-size:12px;color:var(--muted);margin-bottom:6px}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border-radius:12px;border:1px solid #2b4a5c;background:#071724;color:var(--text);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green)}.field textarea{min-height:86px;resize:vertical}.btn{border:0;border-radius:13px;padding:12px 15px;background:var(--green);color:#05241b;font-weight:800}.btn.secondary{background:#1a3447;color:var(--text);border:1px solid #2b4b5e}.btn.danger{background:#3a2028;color:#ffb6b9;border:1px solid #6b333b}.btn.full{width:100%}.btnrow{display:flex;gap:8px;flex-wrap:wrap}.btnrow .btn{flex:1}.tabs{position:fixed;z-index:10;bottom:0;left:0;right:0;background:#081521f2;backdrop-filter:blur(18px);border-top:1px solid #1e394b;display:flex;justify-content:center;padding:8px max(6px,env(safe-area-inset-right)) calc(8px + env(safe-area-inset-bottom)) max(6px,env(safe-area-inset-left))}.tab{flex:1;max-width:140px;border:0;background:transparent;color:#829cac;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 2px;font-size:10px;font-weight:700}.tab .ico{font-size:19px;line-height:1.1}.tab.active{color:var(--green)}.page{display:none}.page.active{display:block}.sectionhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:19px 2px 11px}.pill{font-size:11px;padding:5px 9px;border:1px solid #2c4c5d;border-radius:99px;color:var(--muted)}.checkin{display:flex;align-items:center;gap:12px}.checkcircle{width:46px;height:46px;display:grid;place-items:center;border-radius:15px;background:#123b32;color:var(--green);font-size:22px}.checkin .text{flex:1}.checkin strong{display:block;font-size:14px}.checkin p{margin:4px 0 0;font-size:12px;color:var(--muted)}.achievement{display:flex;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #203b4d}.achievement:last-child{border-bottom:0}.medal{width:43px;height:43px;flex-shrink:0;border-radius:14px;display:grid;place-items:center;background:#203547;font-size:21px}.achievement.done .medal{background:#164235}.achievement .meta{flex:1}.achievement .meta strong{font-size:13px}.achievement .meta p{font-size:11px;color:var(--muted);margin:4px 0 0}.status{font-size:11px;color:var(--muted)}.status.done{color:var(--green)}.entry{border:1px solid #254354;background:#0a1b29;border-radius:14px;padding:13px;margin-top:9px}.entrytop{display:flex;justify-content:space-between;gap:10px}.entry p{font-size:13px;line-height:1.45;margin:8px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}.empty{text-align:center;color:var(--muted);padding:18px 6px;font-size:13px}.timer{font-size:48px;font-weight:850;text-align:center;letter-spacing:2px;margin:14px 0;color:var(--green)}.tip{padding:12px;border-left:3px solid var(--green);background:#0b2a2a;border-radius:0 12px 12px 0;font-size:13px;line-height:1.55}.notice{font-size:11px;color:#a8bdca;line-height:1.6}.footer{text-align:center;color:#678294;font-size:10px;padding:16px 8px}.toast{position:fixed;left:50%;bottom:95px;transform:translate(-50%,15px);background:#e7fff5;color:#08271e;padding:11px 16px;border-radius:12px;font-size:13px;font-weight:700;opacity:0;pointer-events:none;transition:.2s;z-index:30;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}.hidden{display:none!important}@media(min-width:600px){.app{padding:25px 22px}.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.stat .value{font-size:20px}.tabs{border:1px solid #1e394b;border-radius:20px;left:50%;right:auto;transform:translateX(-50%);width:min(700px,96%);bottom:10px}.hero{padding:22px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div class="brand"><div class="logo">✓</div><div><h1>STOP SLOT</h1><small>HARI INI PILIH DIRIMU</small></div></div>
+ <button class="iconbtn" id="settingsShortcut" aria-label="Pengaturan">⚙</button>
+</header>
+
+<main>
+<section class="page active" id="home">
+ <div class="card hero">
+  <div class="eyebrow">Perjalanan pemulihanmu</div>
+  <div class="duration" id="duration">Atur tanggal mulai</div>
+  <div class="subduration" id="sinceLabel">Setiap langkah kecil berarti.</div>
+  <div class="progressline"><div id="goalBar"></div></div>
+  <div class="small muted" id="nextGoal">Pilih target pertamamu — satu hari demi satu hari.</div>
+ </div>
+ <div class="stats">
+  <div class="stat"><div class="label">UANG YANG DIJAGA*</div><div class="value green" id="savedMoney">Rp0</div><div class="note" id="moneyNote">Estimasi dari nominal harian</div></div>
+  <div class="stat"><div class="label">WAKTU BERJALAN</div><div class="value" id="totalDays">0 hari</div><div class="note">Berdasarkan tanggal mulai</div></div>
+  <div class="stat"><div class="label">CHECK-IN</div><div class="value" id="checkCount">0</div><div class="note">Hari yang kamu tandai</div></div>
+  <div class="stat"><div class="label">TARGET TABUNGAN</div><div class="value" id="goalMoney">Rp0</div><div class="note" id="goalPercent">Atur target di pengaturan</div></div>
+ </div>
+ <div class="sectionhead"><h2>Hari ini</h2><span class="pill" id="todayDate"></span></div>
+ <div class="card">
+  <div class="checkin"><div class="checkcircle">✓</div><div class="text"><strong id="checkTitle">Pilih untuk check-in hari ini</strong><p id="checkDescription">Rayakan keputusanmu untuk menjaga diri.</p></div><button class="btn" id="checkBtn">Check-in</button></div>
+ </div>
+ <div class="sectionhead"><h2>Pencapaian berikutnya</h2><button class="iconbtn" data-go="progress">Lihat semua →</button></div>
+ <div class="card" id="nextAchievement"></div>
+ <div class="sectionhead"><h2>Pengingat hari ini</h2></div>
+ <div class="card"><div class="tip" id="dailyQuote">Kamu tidak harus menyelesaikan semuanya hari ini. Cukup ambil keputusan baik berikutnya.</div><div style="height:12px"></div><button class="btn secondary full" data-go="help">Aku sedang ingin bermain</button></div>
+ <p class="notice">*Estimasi uang yang berhasil dijaga dihitung dari pengeluaran slot harian yang kamu masukkan. Ini bukan saldo rekening atau penghematan yang diverifikasi.</p>
+</section>
+
+<section class="page" id="progress">
+ <div class="sectionhead"><h2>Perkembanganmu</h2><span class="pill">Tetap maju</span></div>
+ <div class="card">
+  <div class="eyebrow">Estimasi uang dijaga</div><div class="duration green" id="progressSaved">Rp0</div>
+  <p class="muted small" id="progressFormula">Masukkan perkiraan pengeluaran slot harian di pengaturan.</p>
+  <div class="progressline"><div id="savingsBar"></div></div>
+  <div class="small muted" id="savingsStatus">Setiap rupiah yang tidak dipertaruhkan adalah kesempatan baru.</div>
+ </div>
+ <div class="card"><h3>Target pribadimu</h3><div class="field"><label for="quickGoal">Target tabungan (rupiah)</label><input id="quickGoal" type="number" min="0" step="10000" placeholder="Contoh: 5000000"></div><button class="btn full" id="saveQuickGoal">Simpan target</button></div>
+ <div class="sectionhead"><h2>Milestone perjalanan</h2></div>
+ <div class="card" id="achievementList"></div>
+ <div class="sectionhead"><h2>Ringkasan</h2></div>
+ <div class="card" id="summaryStats"></div>
+</section>
+
+<section class="page" id="journal">
+ <div class="sectionhead"><h2>Jurnal dorongan</h2><span class="pill">Tanpa menghakimi</span></div>
+ <div class="card">
+  <p class="muted small">Mengenali pemicu bisa membantu kamu menyiapkan pilihan yang lebih aman untuk berikutnya.</p>
+  <div class="field"><label for="urgeLevel">Seberapa kuat dorongan bermain?</label><select id="urgeLevel"><option value="1">1 — Ringan</option><option value="2">2 — Agak terasa</option><option value="3" selected>3 — Sedang</option><option value="4">4 — Kuat</option><option value="5">5 — Sangat kuat</option></select></div>
+  <div class="field"><label for="trigger">Apa pemicunya?</label><select id="trigger"><option>Stres atau cemas</option><option>Bosan atau kesepian</option><option>Melihat iklan atau konten judi</option><option>Ingin mengejar kerugian</option><option>Uang baru masuk</option><option>Ajakan teman</option><option>Lainnya</option></select></div>
+  <div class="field"><label for="replacement">Apa yang akan kamu lakukan sebagai gantinya?</label><select id="replacement"><option>Jalan kaki atau bergerak</option><option>Menghubungi orang tepercaya</option><option>Menjauhkan HP selama 10 menit</option><option>Mandi atau minum air</option><option>Mengerjakan tugas kecil</option><option>Mengatur uang dan kebutuhan</option><option>Lainnya</option></select></div>
+  <div class="field"><label for="journalNote">Catatan (opsional)</label><textarea id="journalNote" placeholder="Apa yang sedang kamu rasakan?"></textarea></div>
+  <button class="btn full" id="saveJournal">Simpan catatan</button>
+ </div>
+ <div class="sectionhead"><h2>Riwayat jurnal</h2><button class="iconbtn" id="clearJournal">Hapus semua</button></div>
+ <div id="journalList"></div>
+</section>
+
+<section class="page" id="help">
+ <div class="sectionhead"><h2>Saat dorongan datang</h2><span class="pill">Ambil jeda</span></div>
+ <div class="card">
+  <div class="eyebrow">Jangan putuskan saat dorongan memuncak</div>
+  <h2 style="margin-top:8px">Tunda 10 menit</h2>
+  <p class="muted small">Dorongan terasa kuat, tetapi kamu tidak harus menuruti atau bertindak sekarang. Beri dirimu waktu.</p>
+  <div class="timer" id="timer">10:00</div>
+  <div class="btnrow"><button class="btn full" id="startTimer">Mulai jeda</button><button class="btn secondary" id="resetTimer">Ulangi</button></div>
+  <div style="height:17px"></div>
+  <div class="tip" id="timerMessage">Selama jeda, letakkan HP, pindah ke tempat lain, tarik napas perlahan, dan hubungi seseorang yang kamu percaya.</div>
+ </div>
+ <div class="sectionhead"><h2>Langkah kecil yang bisa dicoba</h2></div>
+ <div class="card">
+  <div class="achievement"><div class="medal">1</div><div class="meta"><strong>Tutup akses</strong><p>Tutup situs/aplikasi judi, berhenti mengikuti akun promosi, dan gunakan fitur pemblokiran jika tersedia.</p></div></div>
+  <div class="achievement"><div class="medal">2</div><div class="meta"><strong>Lindungi uang</strong><p>Pisahkan uang untuk makan, tagihan, dan kebutuhan utama. Pertimbangkan membatasi akses pembayaran.</p></div></div>
+  <div class="achievement"><div class="medal">3</div><div class="meta"><strong>Hubungi orang tepercaya</strong><p>Kirim pesan singkat dan minta ditemani sampai dorongan mereda.</p></div></div>
+  <div class="achievement"><div class="medal">4</div><div class="meta"><strong>Jangan kejar kerugian</strong><p>Berhenti saat ini. Bermain lagi tidak menjamin uang yang hilang kembali.</p></div></div>
+ </div>
+ <div class="card"><h3>Orang pendukungmu</h3><div class="field"><label for="supportName">Nama panggilan (opsional)</label><input id="supportName" placeholder="Contoh: Kakak"></div><div class="field"><label for="supportContact">Nomor kontak (opsional)</label><input id="supportContact" type="tel" placeholder="Simpan di perangkat ini"></div><button class="btn full" id="saveSupport">Simpan kontak pendukung</button><p class="notice">Kontak ini hanya disimpan di browser pada perangkatmu. Aplikasi tidak mengirim pesan otomatis.</p></div>
+</section>
+
+<section class="page" id="settings">
+ <div class="sectionhead"><h2>Pengaturan perjalanan</h2><span class="pill">Data pribadi</span></div>
+ <div class="card">
+  <div class="field"><label for="startDate">Tanggal mulai berhenti</label><input id="startDate" type="date" required></div>
+  <div class="field"><label for="dailySpend">Perkiraan pengeluaran slot per hari (Rp)</label><input id="dailySpend" type="number" min="0" step="1000" placeholder="Contoh: 50000"></div>
+  <div class="field"><label for="targetAmount">Target tabungan (Rp)</label><input id="targetAmount" type="number" min="0" step="10000" placeholder="Contoh: 5000000"></div>
+  <div class="field"><label for="targetDays">Target pencapaian utama</label><select id="targetDays"><option value="7">7 hari</option><option value="30">30 hari</option><option value="90">90 hari</option><option value="180">6 bulan</option><option value="365" selected>1 tahun</option><option value="1825">5 tahun</option></select></div>
+  <div class="field"><label for="nickname">Nama panggilan (opsional)</label><input id="nickname" placeholder="Contoh: Sahabat"></div>
+  <button class="btn full" id="saveSettings">Simpan pengaturan</button>
+ </div>
+ <div class="card">
+  <h3>Cadangkan data</h3><p class="muted small">Simpan file cadangan untuk memindahkan data atau berjaga-jaga jika data browser terhapus.</p>
+  <div class="btnrow"><button class="btn secondary" id="exportData">Ekspor cadangan</button><button class="btn secondary" id="importButton">Impor cadangan</button><input class="hidden" type="file" id="importFile" accept="application/json"></div>
+  <div style="height:15px"></div><button class="btn danger full" id="resetAll">Hapus semua data aplikasi</button>
+ </div>
+ <div class="card"><h3>Privasi dan catatan</h3><p class="notice">Data disimpan di penyimpanan lokal browser pada perangkat ini. Jika kamu menghapus data browser, data bisa hilang. Cadangkan secara berkala. Jangan masukkan informasi rahasia.</p><p class="notice">STOP SLOT adalah alat bantu mandiri, bukan layanan medis atau keuangan. Jika kebiasaan berjudi terasa sulit dikendalikan, minta bantuan orang tepercaya atau tenaga profesional.</p></div>
+</section>
+</main>
+<div class="footer">STOP SLOT · Langkah kecil hari ini tetap berarti.</div>
+</div>
+<nav class="tabs" aria-label="Navigasi utama">
+ <button class="tab active" data-page="home"><span class="ico">⌂</span>Beranda</button>
+ <button class="tab" data-page="progress"><span class="ico">▥</span>Progres</button>
+ <button class="tab" data-page="journal"><span class="ico">✎</span>Jurnal</button>
+ <button class="tab" data-page="help"><span class="ico">♡</span>Bantuan</button>
+ <button class="tab" data-page="settings"><span class="ico">⚙</span>Atur</button>
+</nav>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(()=> {
+const KEY='stopSlotWebsiteV14';
+const todayISO=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const defaults=()=>({startDate:todayISO(),dailySpend:50000,targetAmount:5000000,targetDays:365,nickname:'',checkins:[],journal:[],supportName:'',supportContact:'',quotesSeen:[],version:1});
+let data;
+try{data={...defaults(),...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){data=defaults()}
+const $=id=>document.getElementById(id);
+const rupiah=n=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(Math.max(0,Number(n)||0));
+const parseDate=s=>{if(!s)return new Date();const [y,m,d]=s.split('-').map(Number);return new Date(y,m-1,d,12,0,0)};
+const diffDays=()=>Math.max(0,Math.floor((parseDate(todayISO())-parseDate(data.startDate))/86400000));
+const duration=()=>{let start=parseDate(data.startDate),now=parseDate(todayISO());if(start>now)return {years:0,months:0,days:0,total:0};let y=now.getFullYear()-start.getFullYear(),m=now.getMonth()-start.getMonth(),d=now.getDate()-start.getDate();if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate()}if(m<0){y--;m+=12}return {years:y,months:m,days:d,total:diffDays()}};
+const saved=()=>diffDays()*(Number(data.dailySpend)||0);
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function persist(){localStorage.setItem(KEY,JSON.stringify(data));render()}
+let toastTimer;function toast(s){$('toast').textContent=s;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2300)}
+function durationText(){let d=duration(),parts=[];if(d.years)parts.push(`${d.years} tahun`);if(d.months)parts.push(`${d.months} bulan`);if(d.days||!parts.length)parts.push(`${d.days} hari`);return parts.join(' ')}
+function milestones(){return [{d:1,t:'Hari pertama',i:'🌱',desc:'Kamu sudah memulai.'},{d:7,t:'Satu minggu',i:'🌿',desc:'Satu minggu menjaga pilihanmu.'},{d:30,t:'Satu bulan',i:'🌳',desc:'Satu bulan perjalanan.'},{d:90,t:'Tiga bulan',i:'🏅',desc:'Tiga bulan membangun kebiasaan baru.'},{d:180,t:'Enam bulan',i:'🏆',desc:'Enam bulan melangkah maju.'},{d:365,t:'Satu tahun',i:'🎉',desc:'Satu tahun perjalanan.'},{d:730,t:'Dua tahun',i:'⭐',desc:'Dua tahun menjaga diri.'},{d:1825,t:'Lima tahun',i:'💎',desc:'Lima tahun konsisten.'}]}
+const quotes=['Kamu tidak harus menyelesaikan semuanya hari ini. Cukup ambil keputusan baik berikutnya.','Dorongan akan berubah. Beri dirimu waktu sebelum bertindak.','Uang yang kamu jaga hari ini bisa mendukung kebutuhan nyata dan masa depanmu.','Kemunduran bukan akhir perjalanan. Cari tahu pemicunya dan kembali ke langkah berikutnya.','Kamu berhak mendapatkan dukungan. Tidak perlu menghadapi ini sendirian.','Jangan kejar kerugian. Pilih untuk melindungi apa yang masih kamu miliki.'];
+function render(){
+ const d=duration(),days=d.total,money=saved(),target=Number(data.targetAmount)||0,check=data.checkins.includes(todayISO());
+ $('duration').textContent=durationText();$('sinceLabel').textContent=`Mulai ${parseDate(data.startDate).toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'})}${data.nickname?' · Semangat, '+data.nickname+'!':''}`;
+ $('totalDays').textContent=days.toLocaleString('id-ID')+' hari';$('savedMoney').textContent=rupiah(money);$('moneyNote').textContent=`${rupiah(data.dailySpend)} × ${days} hari`;
+ $('goalMoney').textContent=rupiah(target);$('goalPercent').textContent=target?`${Math.min(100,Math.round(money/target*100))}% dari target`:'Atur target di pengaturan';
+ $('goalBar').style.width=Math.min(100,days/(Number(data.targetDays)||365)*100)+'%';
+ const goal=Number(data.targetDays)||365;$('nextGoal').textContent=days>=goal?`Target ${goal.toLocaleString('id-ID')} hari tercapai — tentukan tujuan baru.`:`${Math.max(0,goal-days)} hari menuju target ${goal.toLocaleString('id-ID')} hari.`;
+ $('todayDate').textContent=new Date().toLocaleDateString('id-ID',{day:'numeric',month:'short'});
+ $('checkCount').textContent=data.checkins.length.toLocaleString('id-ID');
+ $('checkTitle').textContent=check?'Check-in hari ini selesai ✓':'Pilih untuk check-in hari ini';$('checkDescription').textContent=check?'Kamu sudah meluangkan waktu untuk dirimu.':'Rayakan keputusanmu untuk menjaga diri.';$('checkBtn').textContent=check?'Sudah ✓':'Check-in';$('checkBtn').disabled=check;
+ $('progressSaved').textContent=rupiah(money);$('progressFormula').textContent=`${rupiah(data.dailySpend)} per hari × ${days} hari = ${rupiah(money)} estimasi uang yang dijaga.`;
+ const pct=target?Math.min(100,money/target*100):0;$('savingsBar').style.width=pct+'%';$('savingsStatus').textContent=target?`${Math.round(pct)}% dari target ${rupiah(target)}.`:'Tambahkan target tabungan untuk melihat progres.';
+ $('quickGoal').value=data.targetAmount||'';$('startDate').value=data.startDate;$('dailySpend').value=data.dailySpend;$('targetAmount').value=data.targetAmount;$('targetDays').value=String(data.targetDays);$('nickname').value=data.nickname||'';
+ $('supportName').value=data.supportName||'';$('supportContact').value=data.supportContact||'';
+ const ms=milestones(),next=ms.find(x=>days<x.d)||ms[ms.length-1];$('nextAchievement').innerHTML=`<div class="achievement"><div class="medal">${next.i}</div><div class="meta"><strong>${next.t}</strong><p>${next.desc} · ${Math.max(0,next.d-days)} hari lagi</p></div><span class="status">${Math.round(Math.min(100,days/next.d*100))}%</span></div>`;
+ $('achievementList').innerHTML=ms.map(x=>`<div class="achievement ${days>=x.d?'done':''}"><div class="medal">${days>=x.d?'✓':x.i}</div><div class="meta"><strong>${x.t}</strong><p>${x.desc}</p></div><span class="status ${days>=x.d?'done':''}">${days>=x.d?'Tercapai':`${x.d-days} hari lagi`}</span></div>`).join('');
+ $('summaryStats').innerHTML=`<div class="grid2"><div><div class="small muted">Durasi</div><strong>${durationText()}</strong></div><div><div class="small muted">Total check-in</div><strong>${data.checkins.length} hari</strong></div><div><div class="small muted">Jurnal tersimpan</div><strong>${data.journal.length} catatan</strong></div><div><div class="small muted">Estimasi uang dijaga</div><strong class="green">${rupiah(money)}</strong></div></div>`;
+ $('journalList').innerHTML=data.journal.length?data.journal.slice().reverse().map(j=>`<div class="entry"><div class="entrytop"><strong>${escapeHTML(j.trigger)}</strong><span class="pill">${escapeHTML(j.date)}</span></div><p>Intensitas dorongan: ${escapeHTML(j.level)}/5<br>Pengganti: ${escapeHTML(j.replacement)}</p>${j.note?`<p>${escapeHTML(j.note)}</p>`:''}<div style="text-align:right;margin-top:8px"><button class="iconbtn" data-delete-journal="${escapeHTML(j.id)}">Hapus</button></div></div>`).join(''):'<div class="card empty">Belum ada catatan. Kamu bisa mulai kapan saja.</div>';
+ const qidx=Math.floor(Date.now()/86400000)%quotes.length;$('dailyQuote').textContent=quotes[qidx];
+}
+document.querySelectorAll('[data-page]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.page)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>go(b.dataset.go)));
+function go(page){document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id===page));document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.page===page));window.scrollTo({top:0,behavior:'smooth'})}
+$('settingsShortcut').addEventListener('click',()=>go('settings'));
+$('checkBtn').addEventListener('click',()=>{if(!data.checkins.includes(todayISO()))data.checkins.push(todayISO());persist();toast('Check-in tersimpan. Terus jaga dirimu!')});
+$('saveSettings').addEventListener('click',()=>{const sd=$('startDate').value;if(!sd){toast('Pilih tanggal mulai terlebih dahulu');return}if(parseDate(sd)>parseDate(todayISO())){toast('Tanggal mulai tidak boleh di masa depan');return}data.startDate=sd;data.dailySpend=Math.max(0,Number($('dailySpend').value)||0);data.targetAmount=Math.max(0,Number($('targetAmount').value)||0);data.targetDays=Number($('targetDays').value)||365;data.nickname=$('nickname').value.trim();persist();toast('Pengaturan tersimpan')});
+$('saveQuickGoal').addEventListener('click',()=>{data.targetAmount=Math.max(0,Number($('quickGoal').value)||0);persist();toast('Target tabungan disimpan')});
+$('saveJournal').addEventListener('click',()=>{data.journal.push({id:String(Date.now()),date:new Date().toLocaleString('id-ID'),level:$('urgeLevel').value,trigger:$('trigger').value,replacement:$('replacement').value,note:$('journalNote').value.trim()});$('journalNote').value='';persist();toast('Catatan jurnal tersimpan')});
+$('journalList').addEventListener('click',e=>{const b=e.target.closest('[data-delete-journal]');if(!b)return;data.journal=data.journal.filter(j=>j.id!==b.dataset.deleteJournal);persist();toast('Catatan dihapus')});
+$('clearJournal').addEventListener('click',()=>{if(confirm('Hapus semua catatan jurnal?')){data.journal=[];persist();toast('Jurnal dihapus')}});
+$('saveSupport').addEventListener('click',()=>{data.supportName=$('supportName').value.trim();data.supportContact=$('supportContact').value.trim();persist();toast('Kontak pendukung disimpan')});
+$('exportData').addEventListener('click',()=>{const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='stop-slot-cadangan-'+todayISO()+'.json';a.click();URL.revokeObjectURL(a.href);toast('Cadangan dibuat')});
+$('importButton').addEventListener('click',()=>$('importFile').click());
+$('importFile').addEventListener('change',async e=>{const f=e.target.files[0];if(!f)return;try{const obj=JSON.parse(await f.text());if(!obj.startDate||!Array.isArray(obj.checkins)||!Array.isArray(obj.journal))throw new Error('format');data={...defaults(),...obj};persist();toast('Cadangan berhasil dipulihkan')}catch(err){toast('File cadangan tidak valid')}e.target.value=''});
+$('resetAll').addEventListener('click',()=>{if(confirm('Yakin ingin menghapus semua data STOP SLOT di browser ini? Cadangkan dulu jika diperlukan.')){data=defaults();persist();toast('Data direset')}});
+let timerInterval=null,remaining=600;
+function timerRender(){$('timer').textContent=`${String(Math.floor(remaining/60)).padStart(2,'0')}:${String(remaining%60).padStart(2,'0')}`}
+$('startTimer').addEventListener('click',()=>{if(timerInterval){clearInterval(timerInterval);timerInterval=null;$('startTimer').textContent='Lanjutkan jeda';return}if(remaining<=0)remaining=600;$('startTimer').textContent='Jeda timer';$('timerMessage').textContent='Tarik napas perlahan. Jauhkan diri dari akses judi dan tunggu sampai dorongan mereda.';timerInterval=setInterval(()=>{remaining--;timerRender();if(remaining<=0){clearInterval(timerInterval);timerInterval=null;$('startTimer').textContent='Mulai lagi';$('timerMessage').textContent='Kamu sudah mengambil jeda. Periksa apa yang kamu butuhkan sekarang, dan hubungi orang tepercaya jika perlu.';toast('Jeda 10 menit selesai. Bagus sudah memberi waktu pada diri sendiri.')}},1000)});
+$('resetTimer').addEventListener('click',()=>{clearInterval(timerInterval);timerInterval=null;remaining=600;timerRender();$('startTimer').textContent='Mulai jeda';$('timerMessage').textContent='Selama jeda, letakkan HP, pindah ke tempat lain, tarik napas perlahan, dan hubungi seseorang yang kamu percaya.'});
+if('serviceWorker' in navigator && location.protocol.startsWith('http')){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+render();
+})();
+</script>
+</body>
+</html>
